@@ -14,24 +14,21 @@ X = df[["Bonuses","Contribution"]]
 y = df["Salary"]
 from sklearn.linear_model import LinearRegression
 # Note the difference in argument order
-#print(X)
-#print(y)
+print(X)
+print(y)
 
 #predictions = model.predict(X) # make the predictions by the model
 
 # Print out the statistics
 #print(rege.summary())
 
-#rege.fit = (X, y)
-#rege = LinearRegression().fit(X, y)
-#print(rege.coef_)
-#print(rege.intercept_)
-#print(rege.predict(X))
-#lr = LinearRegression()
+rege.fit = (X, y)
+rege = LinearRegression().fit(X, y)
+lr = LinearRegression()
 #x, y = data[:, :-1], data[:, -1]
-#lr.fit(X, y)
-#lr = LinearRegression(copy_X=True, fit_intercept=True, normalize=False)
-#print(lr.coef_)
+lr.fit(X, y)
+lr = LinearRegression(copy_X=True, fit_intercept=True, normalize=False)
+print(lr.coef_)
 
 #print (model.coef_)
 from sklearn.model_selection import train_test_split
@@ -47,13 +44,7 @@ print(model.coef_)
 #print(scores)
 
 
-# In[ ]:
 
-
-
-
-
-# In[ ]:
 
 
 
