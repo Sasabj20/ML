@@ -20,7 +20,6 @@ print(y)
 #predictions = model.predict(X) # make the predictions by the model
 
 # Print out the statistics
-#print(rege.summary())
 
 rege.fit = (X, y)
 rege = LinearRegression().fit(X, y)
@@ -38,10 +37,6 @@ X_train, X_test, y_train, y_test = train_test_split(X, Y, train_size=0.8, random
 model = LinearRegression().fit(X_train, y_train)
 model.fit = (X_train, y_train)
 print(model.coef_)
-#score = model.score(x_train, y_train)
-
-#scores.append(score)
-#print(scores)
 
 
 
