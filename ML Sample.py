@@ -52,9 +52,9 @@ from sklearn.linear_model import RidgeCV, LassoCV, Ridge, Lasso
 
 
 plt.figure(figsize=(14,8))
-corr = df.corr()
+#corr = df.corr()
 heatmap = sns.heatmap(corr, annot=True, cmap="Blues")
-print(df.corr())
+print(reg.score(X,Y))
    Rank Fortune 500rank Name Industry \
 0 1 19 Samsung Electronics Technology   
 1 2 84 Hyundai Motor Automotive   
