@@ -24,8 +24,8 @@ from sklearn.feature_selection import f_regression
 print(df)
 
 #X = df.iloc[[:,0,-1]]
-X = df.iloc[:, [6]]
-Y = df.iloc[:, [4]]
+X = df.iloc[:, [6]] #Employees
+Y = df.iloc[:, [4]] #Revenue
 
 print(X)
 print(Y)
