@@ -14,7 +14,7 @@ from sklearn.linear_model import LinearRegression
 
 
 # Creating a new model and fitting it
-print(df)
+
 from sklearn import linear_model
 from sklearn.feature_selection import SelectKBest
 from sklearn.feature_selection import f_regression
@@ -55,6 +55,7 @@ plt.figure(figsize=(14,8))
 #corr = df.corr()
 heatmap = sns.heatmap(corr, annot=True, cmap="Blues")
 print(reg.score(X,Y))
+
    Rank Fortune 500rank Name Industry \
 0 1 19 Samsung Electronics Technology   
 1 2 84 Hyundai Motor Automotive   
@@ -85,7 +86,8 @@ print(reg.score(X,Y))
 10 28986 229 59915 Seoul  
 11 28541 388 3283 Seoul  
 12 27291 839 5346 Seoul  
-13 26396 901 16580 Seoul  
+13 26396 901 16580 Seoul 
+
     Rank Fortune 500rank Name Industry \
 0 1 19 Samsung Electronics Technology   
 1 2 84 Hyundai Motor Automotive   
@@ -116,7 +118,8 @@ print(reg.score(X,Y))
 10 28986 229 59915 Seoul  
 11 28541 388 3283 Seoul  
 12 27291 839 5346 Seoul  
-13 26396 901 16580 Seoul  
+13 26396 901 16580 Seoul 
+
     Employees
 0 287439
 1 114032
@@ -132,6 +135,7 @@ print(reg.score(X,Y))
 11 3283
 12 5346
 13 16580
+
     Revenue (USD millions)
 0 197705
 1 90740
@@ -151,7 +155,7 @@ print(reg.score(X,Y))
 [16697.92777392]
 0.9517524935850562
 
-Y = 0.61497 + 16697.92777*X
+Y = 0.61497 + 16697.92777 * X
 R2 = 0.95172
   
 
