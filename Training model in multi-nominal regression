@@ -1,58 +1,4 @@
-# ML
-import numpy as np
-import pandas as pd
-from sklearn.model_selection import train_test_split
-from sklearn.linear_model import LinearRegression
-from sklearn.metrics import r2_score
-import matplotlib.pyplot as plt
-import seaborn as sns
-import warnings
-warnings.filterwarnings("ignore")
-import numpy as np
-import pandas as pd
-from sklearn.model_selection import train_test_split
-from sklearn.linear_model import LinearRegression
-from sklearn.metrics import r2_score
-# import matplotlib.pyplot as plt
-# import seaborn as sns
-import warnings
-warnings.filterwarnings("ignore")
 
-#import dataset
-Table=pd.read_excel('E:Table.xlsx')
-Table.describe()
-print(Table.head())
-
-x = Table[['Administration','Marketing Spend']]
-y = Table['Profit']
-
-#from sklearn.compose import make_column_transformer
-#col_trans=make_column_transformer(
-   # (OneHotEncoder(handle_unknown='ignore'),['State']),
-#    remainder='passthrough')
-#x=col_trans.fit_transform(x)
-
-print(x)
-print(y)
-print(Table[['State', 'Profit']])
-print(Table)
-x_train,x_test,y_train,y_test=train_test_split(x,y,test_size=0.2,random_state=0)
-print("X_train:",x_train.shape)
-print("X_test:",x_test.shape)
-print("Y_train:",y_train.shape)
-print("Y_test:",y_test.shape)
-
-linreg=LinearRegression()
-linreg.fit(x_train,y_train)
-#Predict the Test Results
-#Use the predict method to predict the results, then pass the independent variables into it and view the results. It will give the array with all the values in it.
-print(linreg.coef_)
-print(linreg.intercept_)
-y_pred=linreg.predict(x_test)
-y_pred
-
-Accuracy=r2_score(y_test,y_pred)*100
-print(" Accuracy of the model is %.2f" %Accuracy)  
 
 
 
@@ -195,3 +141,4 @@ Y_test: (4,)
 [1.1349916  0.19250487]
 227.47131065269787
  Accuracy of the model is 94.24
+y = 1.1349x1 + 0.1925x2 + 227.4713 
